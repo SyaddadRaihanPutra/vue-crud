@@ -32,7 +32,7 @@
 <script>
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000/api/blogs';
+const API_BASE_URL = 'https://syaddad.thats.im/api/blogs';
 
 export default {
     name: 'blogs',
