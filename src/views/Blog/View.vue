@@ -53,14 +53,14 @@ export default {
     },
     methods: {
         getBlogs() {
-            axios.get('http://syaddad.thats.im/api/blogs').then(res => {
+            axios.get('https://syaddad.thats.im/api/blogs').then(res => {
                 this.blogs = res.data
             });
         },
 
         deleteBlog(blogId) {
             if (confirm('Are you sure you want to delete this blog?')) {
-                axios.delete(`http://syaddad.thats.im/api/blogs/${blogId}`).then(res => {
+                axios.delete(`https://syaddad.thats.im/api/blogs/${blogId}`).then(res => {
                     this.blogs = this.blogs.filter(blog => blog.id_blog !== blogId);
                 }).catch(err => {
                     console.error('Error deleting blog:', err);
