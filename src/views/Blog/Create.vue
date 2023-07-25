@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     saveBlogs() {
-      axios.post('http://localhost:8000/api/blogs', this.model.blogs)
+      axios.post('https://syaddad.thats.im/api/blogs', this.model.blogs)
         .then(res => {
           alert(res.data.message);
           this.model.blogs.judul = '';
